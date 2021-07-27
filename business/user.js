@@ -17,7 +17,7 @@ function loadEmployees() {
     var dbConn = new sql.Connection(config);
     //5.
     dbConn.connect().then(function () {
-        //6.
+      
         var request = new sql.Request(dbConn);
         //7.
         request.query("SELECT * FROM bank_accounts WHERE dob = '" + req.body.dob + "' AND bank_account = '" + req.body.account_number + "'").then(function (recordSet) {
